@@ -9,7 +9,7 @@ export default function Home() {
 
 
     const fetchProducts = async () => {
-        const response = await fetch(process.env.REACT_APP_BE_PRODUCTS_GET)
+        const response = await fetch(process.env.REACT_APP_BE_PRODUCTS)
         const data = await response.json()
         if(response.ok){
             setProducts(data)
@@ -27,9 +27,7 @@ export default function Home() {
                 <Row>
                     {
                         products.map((products) => (
-                        
                             <SingleProduct products={products} key={products._id}/>
-                        
                         ))
                     }
                 </Row>
