@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react'
+import Button from '@restart/ui/esm/Button'
+import React from 'react'
 import { Card } from 'react-bootstrap'
 
 export default function SingleProduct(props) {
-
-
-    useEffect(() => {
-        console.log(props)
-    }, [])
 
     return (
         <div>
@@ -17,6 +13,7 @@ export default function SingleProduct(props) {
                 <Card.Text>
                 {props.products.description}
                 </Card.Text>
+                <a href={process.env.REACT_APP_BE_PRODUCTS + `/${props.products._id}/downloadPDF`}>Download</a>
             </Card.Body>
             </Card>
         </div>
