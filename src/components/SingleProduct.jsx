@@ -13,7 +13,7 @@ export default function SingleProduct(props) {
                 <Card.Text>
                 {props.products.description}
                 </Card.Text>
-                <a href={process.env.REACT_APP_BE_PRODUCTS + `/${props.products._id}/downloadPDF`}>Download</a>
+                <a className="btn btn-primary"href={process.env.REACT_APP_BE_PRODUCTS + `/${props.products._id}/downloadPDF`}>Download</a>
             </Card.Body>
             </Card>
         </div>
